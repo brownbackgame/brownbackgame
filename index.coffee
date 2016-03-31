@@ -40,7 +40,7 @@ swooshSnd = null
 
 tubesTimer = null
 
-githubHtml = "<!--test-->"
+githubHtml = "<!-- test -->"
 
 floor = Math.floor
 
@@ -157,9 +157,9 @@ main = ->
     assets =
       spritesheet:
         bird: [
-          "assets/characters/ksu.png"
-          31
-          24
+          "assets/bird.png"
+          36
+          26
         ]
 
       image:
@@ -223,11 +223,7 @@ main = ->
     # Add bird
     bird = game.add.sprite(0, 0, "bird")
     bird.anchor.setTo 0.5, 0.5
-    bird.animations.add "fly", [
-      0
-      1
-      2
-    ], 10, true
+    
     bird.body.collideWorldBounds = true
     bird.body.setPolygon(
       24,1,

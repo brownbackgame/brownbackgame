@@ -183,14 +183,12 @@
     preload = function() {
       var assets;
       assets = {
-        spritesheet: {
-          bird: ["assets/bird.png", 36, 26]
-        },
         image: {
           tubeTop: ["assets/tube1.png"],
           tubeBottom: ["assets/tube2.png"],
           ground: ["assets/ground.png"],
-          bg: ["assets/bg.png"]
+          bg: ["assets/bg.png"],
+          bird: ["assets/characters/ksu.png"]
         },
         audio: {
           flap: ["assets/sfx_wing.mp3"],
@@ -222,9 +220,8 @@
       bg = game.add.tileSprite(0, 0, WIDTH, HEIGHT, 'bg');
       tubes = game.add.group();
       invs = game.add.group();
-      bird = game.add.sprite(0, 0, "bird");
+      bird = game.add.image(0, 0, "bird");
       bird.anchor.setTo(0.5, 0.5);
-      bird.animations.add("fly", [0, 1, 2], 10, true);
       bird.body.collideWorldBounds = true;
       bird.body.setPolygon(24, 1, 34, 16, 30, 32, 20, 24, 12, 34, 2, 12, 14, 2);
       ground = game.add.tileSprite(0, GROUND_Y, WIDTH, GROUND_HEIGHT, "ground");
@@ -266,8 +263,8 @@
       gameStarted = false;
       gameOver = false;
       score = 0;
-      scoreText.setText("Flappy Bird");
-      instText.setText("TOUCH TO FLAP\nbird WINGS");
+      scoreText.setText("Thread the Cuts");
+      instText.setText("TAP to\nfly");
       gameOverText.renderable = false;
       bird.body.allowGravity = false;
       bird.reset(game.world.width * 0.3, game.world.height / 2);

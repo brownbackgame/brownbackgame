@@ -183,7 +183,7 @@ main = function() {
     var assets;
     assets = {
       spritesheet: {
-        bird: ["assets/bird.png", 36, 26]
+        bird: ["assets/characters/ksu.png", 31, 24]
       },
       image: {
         tubeTop: ["assets/tube1.png"],

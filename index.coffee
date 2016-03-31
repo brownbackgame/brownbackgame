@@ -157,9 +157,9 @@ main = ->
     assets =
       spritesheet:
         bird: [
-          "assets/bird.png"
-          36
-          26
+          "assets/characters/ksu.png"
+          31
+          24
         ]
 
       image:

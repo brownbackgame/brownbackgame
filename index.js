@@ -180,25 +180,85 @@ main = function() {
     }
   };
   preload = function() {
-    var assets;
-    assets = {
-      spritesheet: {
-        bird: ["assets/characters/ksu.png", 31, 24]
-      },
-      image: {
-        tubeTop: ["assets/tube1.png"],
-        tubeBottom: ["assets/tube2.png"],
-        ground: ["assets/ground.png"],
-        bg: ["assets/bg.png"]
-      },
-      audio: {
-        flap: ["assets/sfx_wing.mp3"],
-        score: ["assets/sfx_point.mp3"],
-        hurt: ["assets/sfx_hit.mp3"],
-        fall: ["assets/sfx_die.mp3"],
-        swoosh: ["assets/sfx_swooshing.mp3"]
-      }
-    };
+    var assets, charNum;
+    charNum = Math.floor(Math.random() * (4 - 1) + 1);
+    if (charNum === 1) {
+      assets = {
+        spritesheet: {
+          bird: ["assets/characters/ksu.png", 31, 24]
+        },
+        image: {
+          tubeTop: ["assets/tube1.png"],
+          tubeBottom: ["assets/tube2.png"],
+          ground: ["assets/ground.png"],
+          bg: ["assets/bg.png"]
+        },
+        audio: {
+          flap: ["assets/sfx_wing.mp3"],
+          score: ["assets/sfx_point.mp3"],
+          hurt: ["assets/sfx_hit.mp3"],
+          fall: ["assets/sfx_die.mp3"],
+          swoosh: ["assets/sfx_swooshing.mp3"]
+        }
+      };
+    } else if (charNum === 2) {
+      assets = {
+        spritesheet: {
+          bird: ["assets/characters/ku.png", 34, 20]
+        },
+        image: {
+          tubeTop: ["assets/tube1.png"],
+          tubeBottom: ["assets/tube2.png"],
+          ground: ["assets/ground.png"],
+          bg: ["assets/bg.png"]
+        },
+        audio: {
+          flap: ["assets/sfx_wing.mp3"],
+          score: ["assets/sfx_point.mp3"],
+          hurt: ["assets/sfx_hit.mp3"],
+          fall: ["assets/sfx_die.mp3"],
+          swoosh: ["assets/sfx_swooshing.mp3"]
+        }
+      };
+    } else if (charNum === 3) {
+      assets = {
+        spritesheet: {
+          bird: ["assets/characters/wsu.png", 28, 23]
+        },
+        image: {
+          tubeTop: ["assets/tube1.png"],
+          tubeBottom: ["assets/tube2.png"],
+          ground: ["assets/ground.png"],
+          bg: ["assets/bg.png"]
+        },
+        audio: {
+          flap: ["assets/sfx_wing.mp3"],
+          score: ["assets/sfx_point.mp3"],
+          hurt: ["assets/sfx_hit.mp3"],
+          fall: ["assets/sfx_die.mp3"],
+          swoosh: ["assets/sfx_swooshing.mp3"]
+        }
+      };
+    } else {
+      assets = {
+        spritesheet: {
+          bird: ["assets/characters/fhsu.png", 24, 23]
+        },
+        image: {
+          tubeTop: ["assets/tube1.png"],
+          tubeBottom: ["assets/tube2.png"],
+          ground: ["assets/ground.png"],
+          bg: ["assets/bg.png"]
+        },
+        audio: {
+          flap: ["assets/sfx_wing.mp3"],
+          score: ["assets/sfx_point.mp3"],
+          hurt: ["assets/sfx_hit.mp3"],
+          fall: ["assets/sfx_die.mp3"],
+          swoosh: ["assets/sfx_swooshing.mp3"]
+        }
+      };
+    }
     Object.keys(assets).forEach(function(type) {
       Object.keys(assets[type]).forEach(function(id) {
         game.load[type].apply(game.load, [id].concat(assets[type][id]));

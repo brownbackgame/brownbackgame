@@ -116,7 +116,7 @@ main = ->
     hiscore = (if hiscore then hiscore else score)
     hiscore = (if score > parseInt(hiscore, 10) then score else hiscore)
     window.localStorage.setItem "hiscore", hiscore
-    gameOverText.setText "GAMEOVER\n\nHIGH SCORE\n\n" + hiscore
+    gameOverText.setText "Brownback Wins!\n\nHIGH SCORE\n\n" + hiscore
     gameOverText.renderable = true
 
     # Stop all tubes

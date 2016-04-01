@@ -154,7 +154,7 @@ main = ->
 
   preload = ->
   
-  	charNum = Math.floor(Math.random() * (4 - 1) + 1)
+  	charNum = Math.floor(Math.random() * (5 - 1) + 1)
   	if (charNum == 1)
   	  assets =
   	    spritesheet:
@@ -204,6 +204,27 @@ main = ->
             "assets/characters/wsu.png"
             28
             23
+          ]
+        image:
+          tubeTop: ["assets/tube1.png"]
+          tubeBottom: ["assets/tube2.png"]
+          ground: ["assets/ground.png"]
+          bg: ["assets/bg.png"]
+
+        audio:
+          flap: ["assets/sfx_wing.mp3"]
+          score: ["assets/sfx_point.mp3"]
+          hurt: ["assets/sfx_hit.mp3"]
+          fall: ["assets/sfx_die.mp3"]
+          swoosh: ["assets/sfx_swooshing.mp3"]
+          
+    else if (charNum == 4)
+  	  assets =
+  	    spritesheet:
+          bird: [
+            "assets/characters/esu.png"
+            26
+            24
           ]
         image:
           tubeTop: ["assets/tube1.png"]

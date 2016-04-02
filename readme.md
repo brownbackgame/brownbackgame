@@ -1,8 +1,10 @@
-#HTML5 flappy bird
+#Thread Brownback's Cuts
 
-play here: http://hyspace.io/flappy/
+Try your best to avoid Brownback's tax cuts. If you're lucky, you may be able to avoid a few... but no matter what, Brownback always wins.
 
-based on http://uralozden.com/flappy/
+Play Here: http://brownbackgame.com/
+
+Forked From: https://github.com/hyspace/flappy
 
 ##License
 

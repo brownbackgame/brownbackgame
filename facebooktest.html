@@ -115,11 +115,11 @@ function shareScore() {
 FB.ui(
    {
      method: 'feed',
-     name: 'I got past ' + window.localStorage.getItem("hiscore") + "of Brownback's cuts.",
+     name: 'I got past ' + window.localStorage.getItem("hiscore") + " of Brownback's cuts.",
      link: 'http://developers.facebook.com/docs/reference/dialogs/',
      picture: 'http://brownbackgame.com/assets/thumb.png',
-     caption: 'How many can you get past?',
-     description: "Thread Brownback's Cuts"
+     description: 'How many can you get past?',
+     caption: "Thread Brownback's Cuts"
    },
    function(response) {
      if (response && response.post_id) {

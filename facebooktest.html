@@ -112,21 +112,18 @@
 </script>
 <script>
 function shareScore() {
+
+if (window.localStorage.getItem("hiscore") == null) {
+	window.localStorage.setItem("hiscore",0);
+}
 FB.ui(
    {
      method: 'feed',
-     name: 'I got past ' + window.localStorage.getItem("hiscore") + " of Brownback's cuts.",
+     name: 'I got past ' + window.localStorage.getItem("hiscore") + " of Brownback's cuts!",
      link: 'http://developers.facebook.com/docs/reference/dialogs/',
      picture: 'http://brownbackgame.com/assets/thumb.png',
      description: 'How many can you get past?',
      caption: "Thread Brownback's Cuts"
-   },
-   function(response) {
-     if (response && response.post_id) {
-       console.log('Post was published.');
-     } else {
-       console.log('Post was not published.');
-     }
    }
 );
 }

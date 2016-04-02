@@ -21,7 +21,6 @@ deadTubeBottoms = []
 deadInvs = []
 
 bg = null
-# credits = null
 tubes = null
 invs = null
 bird = null
@@ -39,6 +38,11 @@ fallSnd = null
 swooshSnd = null
 
 tubesTimer = null
+
+character = window.localStorage.getItem("character")
+if character == null
+  window.localStorage.setItem "character", "ksu"
+  character = window.localStorage.getItem("character")
 
 
 floor = Math.floor
@@ -154,8 +158,7 @@ main = ->
 
   preload = ->
   
-  	charNum = Math.floor(Math.random() * (4 - 1) + 1)
-  	if (charNum == 1)
+  	if (character == "ksu")
   	  assets =
   	    spritesheet:
           bird: [
@@ -176,7 +179,7 @@ main = ->
           fall: ["assets/sfx_die.mp3"]
           swoosh: ["assets/sfx_swooshing.mp3"]
           
-    else if (charNum == 2)
+    else if (character == "ku")
   	  assets =
   	    spritesheet:
           bird: [
@@ -197,7 +200,7 @@ main = ->
           fall: ["assets/sfx_die.mp3"]
           swoosh: ["assets/sfx_swooshing.mp3"]
           
-    else if (charNum == 3)
+    else if (character == "wsu")
   	  assets =
   	    spritesheet:
           bird: [
@@ -261,17 +264,6 @@ main = ->
 
     # Draw bg
     bg = game.add.tileSprite(0, 0, WIDTH, HEIGHT, 'bg')
-
-    # Credits 'yo
-    # credits = game.add.text(game.world.width / 2, HEIGHT - GROUND_Y + 50, "",
-    #   font: "8px \"Press Start 2P\""
-    #   fill: "#fff"
-    #   stroke: "#430"
-    #   strokeThickness: 4
-    #   align: "center"
-    # )
-    # credits.anchor.x = 0.5
-
 
     # # Add clouds group
     # clouds = game.add.group()
@@ -350,8 +342,6 @@ main = ->
     gameStarted = false
     gameOver = false
     score = 0
-    # credits.renderable = true
-    # credits.setText "see console log\nfor github url"
     scoreText.setText "Thread\nBrownback's Cuts"
     instText.setText "Try your best to avoid\nBrownback's pay cuts.\n\nTAP TO FLY"
     gameOverText.renderable = false
@@ -365,7 +355,6 @@ main = ->
 
   start = ->
 
-    # credits.renderable = false
     bird.body.allowGravity = true
     bird.body.gravity.y = GRAVITY
 

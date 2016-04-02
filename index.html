@@ -64,6 +64,17 @@
   .character img {
     vertical-align: middle;
   }
+  .facebook-share {
+	background-color: #3b5998;
+	color: #fff;
+	padding: 2px 8px 6px 8px;
+	text-decoration: none;
+  }
+  .facebook-share img {
+  	height: 16px;
+  	padding-bottom: 2px;
+  	vertical-align: middle;
+  }
   </style>
 </head>
 <body>
@@ -75,7 +86,8 @@
 	<a class="character" href="javascript:setCharacter('fhsu');"><img src="/assets/characters/fhsu.png"></a>
 	<a class="character" href="javascript:setCharacter('wsu');"><img src="/assets/characters/wsu.png"></a>
 	<br>
-	<a href="about/">ABOUT THIS GAME</a></div>
+	<a href="about/">ABOUT THIS GAME</a> | <a class="facebook-share" href="javascript:shareScore();"><img src="assets/facebook.png"> Share Score</a>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/1.1.4/phaser.js"></script>
 <script src="index.js"></script>
 
@@ -89,6 +101,44 @@
 			console.log("It seems that local storage isn't working"); 
 		}
 	}
+</script>
+
+
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1556187321377959',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+function shareScore() {
+
+if (window.localStorage.getItem("hiscore") == null) {
+	window.localStorage.setItem("hiscore",0);
+}
+FB.ui(
+   {
+     method: 'feed',
+     name: 'I got past ' + window.localStorage.getItem("hiscore") + " of Brownback's cuts!",
+     link: 'http://developers.facebook.com/docs/reference/dialogs/',
+     picture: 'http://brownbackgame.com/assets/thumb.png',
+     description: 'How many can you get past?',
+     caption: "Thread Brownback's Cuts"
+   }
+);
+}
 </script>
 
 <script>

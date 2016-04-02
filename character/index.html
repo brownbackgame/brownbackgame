@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Avoid Brownback's Cuts | Character Selection</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="author" content="Sam Brownback" />
+      <meta name="description" content="Try your best to avoid Brownback's pay cuts." />
+      <meta name="keywords" content="flappybird,flappy,bird,floppybird,floppy,brownback,cuts" />
+      
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+      <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+      <link rel="manifest" href="/manifest.json">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+      <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+      <meta name="msapplication-TileColor" content="#ffc40d">
+      <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width">
+  
+  <style>
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    text-align: center;
+	font-family: 'VT323', sans-serif;
+  }
+  p, a{
+    color: #FFF;
+	font-size: 24px;
+  }
+  #container{
+  	max-width: 500px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding: 10px;
+  }
+  </style>
+</head>
+<body>
+<div id="container">
+	<a href="../">< RETURN TO GAME</a>
+	<p>Tap the character you would like to play as.</p>
+	<a class="character" href="javascript:setCharacter('ksu');"><img src="/assets/characters/ksu.png"></a>
+	<a class="character" href="javascript:setCharacter('ku');"><img src="/assets/characters/ku.png"></a>
+	<a class="character" href="javascript:setCharacter('fhsu');"><img src="/assets/characters/fhsu.png"></a>
+	<a class="character" href="javascript:setCharacter('wsu');"><img src="/assets/characters/wsu.png"></a>
+</div>
+<script>
+	function setCharacter(selectedChar) {
+		if (typeof(window.localStorage) != 'undefined') { 
+			window.localStorage.setItem("character",selectedChar); 
+		}
+		else { 
+			console.log("It seems that local storage isn't working"); 
+		}
+	}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59705564-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

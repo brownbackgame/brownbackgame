@@ -31,62 +31,23 @@
       <meta name="msapplication-TileColor" content="#ffc40d">
       <meta name="theme-color" content="#ffffff">
       
+      <link href='style.css' rel='stylesheet' type='text/css'>      
       <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
   	  <meta name="viewport" content="width=device-width">
   <style>
-  body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #000;
-	font-family: 'VT323', sans-serif;
-  }
-  #screen canvas{
-    margin: 0 auto;
-  }
-  #about{
-    position:absolute;
-    bottom: 0px;
-    background: #FFF;
-    text-align: center;
-    width: 100%;
-    padding: 10px 0 10px 0;
-    color: #000;
-  }
-  #loading{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    top: 50%;
-  }
-  .character img {
-    vertical-align: middle;
-  }
-  .facebook-share {
-	background-color: #3b5998;
-	color: #fff;
-	padding: 2px 8px 6px 8px;
-	text-decoration: none;
-  }
-  .facebook-share img {
-  	height: 16px;
-  	padding-bottom: 2px;
-  	vertical-align: middle;
-  }
+
   </style>
 </head>
 <body>
 <div id="loading">Loading...</div>
 <div id="screen"></div>
 <div id="about">CHARACTER: 
-	<a class="character" href="javascript:setCharacter('ksu');"><img src="/assets/characters/ksu.png"></a>
-	<a class="character" href="javascript:setCharacter('ku');"><img src="/assets/characters/ku.png"></a>
-	<a class="character" href="javascript:setCharacter('fhsu');"><img src="/assets/characters/fhsu.png"></a>
-	<a class="character" href="javascript:setCharacter('wsu');"><img src="/assets/characters/wsu.png"></a>
-	<br>
-	<a href="about/">ABOUT THIS GAME</a> | <a class="facebook-share" href="javascript:shareScore();"><img src="assets/facebook.png"> Share Score</a>
+	<a class="character" href="javascript:setCharacter('ksu');"><img src="assets/characters/ksu.png"></a>
+	<a class="character" href="javascript:setCharacter('ku');"><img src="assets/characters/ku.png"></a>
+	<a class="character" href="javascript:setCharacter('fhsu');"><img src="assets/characters/fhsu.png"></a>
+	<a class="character" href="javascript:setCharacter('wsu');"><img src="assets/characters/wsu.png"></a>
+	<br><br>
+	<a class="about-button" href="about/">ABOUT THIS GAME</a>&nbsp;&nbsp;<a class="facebook-share" href="javascript:shareScore();"><img src="assets/facebook.png"> Share Score</a>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/1.1.4/phaser.js"></script>
 <script src="index.js"></script>

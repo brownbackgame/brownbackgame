@@ -46,13 +46,12 @@
   }
   #about{
     position:absolute;
-    bottom: 5px;
+    bottom: 0px;
     background: #FFF;
     text-align: center;
     width: 100%;
     padding: 10px 0 10px 0;
     color: #000;
-    margin-bottom: -5px;
   }
   #loading{
     position: absolute;
@@ -62,12 +61,15 @@
     font-size: 24px;
     top: 50%;
   }
+  .character img {
+    vertical-align: middle;
+  }
   </style>
 </head>
 <body>
 <div id="loading">Loading...</div>
 <div id="screen"></div>
-<div id="about">CHARACTER:
+<div id="about">CHARACTER: 
 	<a class="character" href="javascript:setCharacter('ksu');"><img src="/assets/characters/ksu.png"></a>
 	<a class="character" href="javascript:setCharacter('ku');"><img src="/assets/characters/ku.png"></a>
 	<a class="character" href="javascript:setCharacter('fhsu');"><img src="/assets/characters/fhsu.png"></a>

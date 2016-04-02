@@ -12,9 +12,9 @@ body{
 	position:absolute;
 	bottom: 0px;
 	text-align: center;
-	width: 100%;
 	padding: 10px 0 10px 0;
 	color: #fff;
+	width: 100%;
 }
 #loading{
 	position: absolute;
@@ -43,4 +43,10 @@ body{
 	height: 16px;
 	padding-bottom: 2px;
 	vertical-align: middle;
+}
+#character-selection {
+    margin-bottom: 15px;
+    padding: 5px;
+    background: #fff;
+    color: #000;
 }

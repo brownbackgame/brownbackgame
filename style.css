@@ -5,6 +5,9 @@ body{
 	background: #000;
 	font-family: 'VT323', sans-serif;
 }
+#screen {
+	max-height: 100vh;
+}
 #screen canvas{
 	margin: 0 auto;
 }
